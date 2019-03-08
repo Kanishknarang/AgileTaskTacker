@@ -133,8 +133,8 @@ LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'kanishknarang123@gmail.com'
-EMAIL_HOST_PASSWORD = 'mfooswkqplklgegd'
+EMAIL_HOST_PASSWORD = ''
