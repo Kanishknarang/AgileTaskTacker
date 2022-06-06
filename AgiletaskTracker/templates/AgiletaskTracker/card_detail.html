@@ -1,0 +1,24 @@
+﻿
+{% extends "AgiletaskTracker/base.html" %}
+{% block content %}
+    
+        <article class="media content-section">
+	            <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ object.assignee }}</a>
+              <small class="text-muted">{{ object.date_created|date:"F d, Y" }}</small>
+              <small class="text-muted">{{ object.priority }}</small>
+              <small class="text-muted">{{ object.status}}</small>
+              <small class="text-muted">{{ object.type }}</small>
+	      {% if object.assignee == user %}
+		<div>
+
+		</div>
+	      {% endif %}
+            </div>
+            <h2 class="article-title"></h2>
+            <p class="article-content">{{ object.title}}</p>
+          </div>
+        </article>
+    
+{% endblock content %}

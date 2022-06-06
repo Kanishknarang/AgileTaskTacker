@@ -1,0 +1,19 @@
+﻿
+{% extends "AgiletaskTracker/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="{% url 'user-task' post.assignee.username %}">{{ post.assignee.username }}</a>
+              <small class="text-muted">{{ post.date_created|date:"F d, Y" }}</small>
+			  <small class="text-muted">{{ post.priority }}</small>
+			  <small class="text-muted">{{ post.status }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'card-detail' post.id %}">{{ post.title }}</a></h2>
+           
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
